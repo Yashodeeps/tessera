@@ -1,0 +1,20 @@
+{
+  "name": "@tessera/math",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tessera/typescript-config": "workspace:*",
+    "typescript": "5.9.2",
+    "vitest": "^4.0.10"
+  }
+}
