@@ -1,5 +1,5 @@
 {
-  "name": "@tessera/math",
+  "name": "@tessera/geometry",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.ts",
@@ -20,5 +20,8 @@
     "@tessera/typescript-config": "workspace:*",
     "typescript": "5.9.2",
     "vitest": "^4.0.10"
+  },
+  "dependencies": {
+    "@tessera/math": "workspace:*"
   }
 }
