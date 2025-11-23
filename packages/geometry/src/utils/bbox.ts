@@ -1,5 +1,6 @@
 import { Vec2 } from "@tessera/math";
 import { Polygon } from "../shapes/Polygon";
+import type { Rect } from "../shapes/Rect";
 
 export interface BBox {
   minX: number;
@@ -28,4 +29,22 @@ export function bboxContainsPoint(b: BBox, p: Vec2): boolean {
     p.y >= b.minY &&
     p.y <= b.maxY
   );
+}
+
+export function bboxIntersects(a: BBox, b: BBox): boolean {
+  return !(
+    a.maxX < b.minX ||
+    a.minX > b.maxX ||
+    a.maxY < b.minY ||
+    a.minY > b.maxY
+  );
+}
+
+export function bboxToRect(bbox: BBox): { x: number; y: number; width: number; height: number } {
+  return {
+    x: bbox.minX,
+    y: bbox.minY,
+    width: bbox.maxX - bbox.minX,
+    height: bbox.maxY - bbox.minY,
+  };
 }
